@@ -1,5 +1,5 @@
-
-///// Dung Array.map()
+////                Câu 1:
+/////            Dung Array.map()
 function mapTwoArrayEqualLengthUseMap(array1, array2) {
     if (!Array.isArray(array1) || !Array.isArray(array2)) {
         console.log("Tham so khong phai mang");
@@ -42,7 +42,7 @@ mapTwoArrayNotEqualLengthUseMap([1, 2, 3], [4, 5, 6,7]);
 ///Expect: Tham so khong phai mang.
 mapTwoArrayNotEqualLengthUseMap(1, [4, 5, 6, 7]);
 
-///// Dung Array.forEach()
+//////                        Dung Array.forEach()
 function mapTwoArrayEqualLengthUseForEach(array1, array2){
     if (!Array.isArray(array1) || !Array.isArray(array2)) {
         console.log("tham so khong phai mang");

@@ -52,7 +52,7 @@
     slice(number1 [,number2]):cắt chuỗi từ number1 đến number 2, nếu không có number 2 nhận chuỗi mới từ number1 đến hết.(số âm tính cuối lên.)
     substring(number1 [,number2]):~slice() không có trường hợp number âm.
     substr(number [,length]):~slice():length là độ dài của chuỗi mới.
-    replace(str1,str2): thay thế str1 =str2 ở vị trí đầu tiên tìm thấy.(Có phân biệt hoa thường) /str1/i :không phân biệt hoá thường. /str1/g : thay thế toàn bộ. Dùng được biểu thức chính quy.
+    replace(str1,str2): thay thế str1 =str2 ở vị trí đầu tiên tìm thấy.(Có phân biệt hoa thường) /str1/i :không phân biệt hoa thường. /str1/g : thay thế toàn bộ. Dùng được biểu thức chính quy.
     toUpperCase()
     toLowerCase()
     concat(str1,str2):nối chuỗi.
@@ -152,3 +152,90 @@
     khi thay đổi giá trị bên trong hàm thì ra ngoài hà, sẽ bị thay đổi theo.
     kiểu dữ liệu non-primitive: object , array,...
     tricks: gán hẳn 1 giá trị mới cho param.
+
+#handle array:
+
+##map():
+
+    mỗi phần tử của mảng đều thực hiện 1 hàm và trả về 1 hàm mới.
+    map( funccallback  [,thisArg])
+    callback(curentValue  [,index [,array]]):giá trị,index pt trong mảng đand được xử lý , mảng đang được xử lí.
+
+##forEach():
+
+    mỗi phần tử của mảng đều gọi lai hàm.
+
+##find():
+
+    trả lại giá trị phần tử đầu tiên của mảng thoả mãn hàm kiểm tra callback(giống tham số giống callback của map).
+    không có thì trả lại undefied.
+
+##findIndex():
+
+    trả về giá trị index của phần tử đầu tiền thoả mãn hàm kiểm tra callback.
+    trả về -1 nếu không có
+
+##filter():
+
+    trả về mảng mới gồm tất cả các phần tử thoả mãn hàm kiểm tra callback.
+
+##reduce():
+
+    thực thi 1 hàm lên từng phần tử của mảng từ trái qua phải và trả về 1 giá trị tích luỹ.
+    reduce(callback [,initialValue]):callback(accumulator,currentValue [,currentIndex [,array]]);
+    accumulator=initialValue /accumulator=phần tử đầu tiền của mảng.
+    currentValue:phần tử đang được xử lí.
+    currentIndex=0 nếu có initialValue =1 nếu không có.
+
+#for/for...in/for...of:
+
+##for:
+
+    for(statement1;statement2;statement3){
+        ...
+    }
+
+##for/in:
+
+    for(let x in list){
+        //lặp qua thuộc tính của đối tượng.
+        truy cập list[x];
+    }
+
+##for/of:
+
+    for(let x of list){
+        // lặp qua gía trị của đối tượng.
+        truy cập: x;
+    }
+
+#setTimeout(function,time):
+
+    set thời gian sau time thì hàm function chạy . function chỉ chạy đúng 1 lần.
+    gán hàm setTimeout vào 1 biến cụ thể để dùng.
+
+#clearTimeout(variable);
+
+    huỷ bỏ setTimeout của variable;
+
+#setInterval(function,time);
+
+    cứ sau time thì chạy lại hàm function.
+    gán setInterval() vào biến để dùng.
+
+#clearInterval(variable):
+
+    huỷ bỏ setInterval của variable;
+
+#requestAnimationFrame:
+
+    chạy code animation trước những lần trình duyệt repaint lại web.
+    làm animation chạy mượt hơn.
+    requestAnimationFrame(callback): callback:hàm chứa code animation trong callback phải gọi lại requestAnimationFrame 1 lần nữa.
+
+#cancelAnimationFrame()
+
+    dừng resquestAnimationFrame. dùng ~ clearInterval();
+
+#cookie:
+

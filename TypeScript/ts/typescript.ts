@@ -260,11 +260,11 @@ protected  |         +        |      -          |     +
 // 		return this.firstName + " " + this.lastName;
 // 	},
 // };
-function check(x: number) {
-	x = 5;
-	// console.log(x);
-}
-let x = 1;
-console.log(x);
-check(x);
-console.log(x);
+// function check(x: number) {
+// 	x = 5;
+// 	// console.log(x);
+// }
+// let x = 1;
+// console.log(x);
+// check(x);
+// console.log(x);
