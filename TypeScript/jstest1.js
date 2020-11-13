@@ -137,3 +137,37 @@ mapTwoArrayNotEqualLengthUseReduce([1, 2, 3,4], [4, 5, 6]);
 mapTwoArrayNotEqualLengthUseReduce([1, 2, 3], [4, 5, 6]);
 ///Expect: Tham so khong phai mang.
 mapTwoArrayNotEqualLengthUseReduce([1, 2, 3], 3);
+
+
+
+
+//////localStorage
+
+// if ((typeof localStorage !== "undefined")) {
+//     console.log("co ho tro");
+// } else {
+//     console.log("Khong ho tro");
+// }
+// // localStorage.setItem("key", "value");
+// // console.log(localStorage.getItem("key"));
+// localStorage.name = "xin chao";
+// localStorage.setItem("age", 20);
+// localStorage.class = "it";
+// console.log(`${localStorage.name}-${localStorage.age}-${localStorage.class}`);
+// localStorage.removeItem('age');
+// localStorage.clear();
+
+// if (typeof sessionStorage !== undefined) {
+//     console.log("co ho tro");   
+// } else {
+//     console.log("khong ho tro");
+// }
+// sessionStorage.setItem('key1', 'value1');
+// sessionStorage.key2 = 'value2';
+// sessionStorage['key3'] = 'value3';
+document.cookie = "key4=value4";
+document.cookie = "key3=value3";
+
+var xcookie = getCookie(key3);
+console.log(document.cookie);
+console.log(xcookie);
